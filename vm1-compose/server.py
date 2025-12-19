@@ -11,4 +11,5 @@ while True:
     client_socket , address = server.accept()
     client_data= (client_socket.recv(4096)).decode("utf-8")
     client_socket.close()
+    print(client_data)
 
