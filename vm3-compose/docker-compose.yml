@@ -1,0 +1,16 @@
+
+version: "3.8"
+services:
+  relay:
+    build: ./relay
+    container_name: relay
+    ports:
+      - "9999:9999"
+  hasher:
+    build: ./hasher
+    container_name: hasher
+  registry:
+    image: registry:2
+    container_name: registry
+    ports:
+      - "5000:5000"

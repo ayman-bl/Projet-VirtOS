@@ -1,0 +1,11 @@
+
+version: "3.8"
+services:
+  keygen:
+    build: ./keygen
+    container_name: keygen
+  encryptor:
+    build: ./encryptor
+    container_name: encryptor
+    ports:
+      - "7100:7100"     

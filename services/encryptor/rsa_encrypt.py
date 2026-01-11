@@ -1,5 +1,6 @@
 from Crypto.PublicKey import RSA
 from Crypto.Cipher import PKCS1_OAEP
+from socket import socket
 
 
 def encrypt(msg, pub_key):
