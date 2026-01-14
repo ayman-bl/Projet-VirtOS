@@ -27,12 +27,12 @@ while True:
         out_socket.close()
         print("Sent to encryptor")
 
-    elif dst == "hasher":
+    elif dst == "hasher_verifier":
         out_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        out_socket.connect(("hasher", 7200))
+        out_socket.connect(("hasher_verifier", 7200))
         out_socket.send((json.dumps(msg) + "\n").encode())
         out_socket.close()
-        print("Sent to hasher")
+        print("Sent to hasher_verifier")
 
     elif dst == "windows":
         out_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
