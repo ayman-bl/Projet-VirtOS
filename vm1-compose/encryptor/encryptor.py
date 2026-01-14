@@ -52,7 +52,7 @@ while True:
         }
 
         send_s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        send_s.connect(("192.168.200.23", 9999))
+        send_s.connect(("192.168.200.32", 9999))
         send_s.send(json.dumps(result).encode() + b"\n")
         send_s.close()
 

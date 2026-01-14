@@ -6,7 +6,7 @@ payload_text = "hello"
 job_id = str(uuid.uuid4())[:8]
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.connect(("192.168.200.23", 9999))
+s.connect(("192.168.200.32", 9999))
 
 msg = {"type": "START", "job_id": job_id, "payload": payload_text, "dst": "encryptor"}
 
