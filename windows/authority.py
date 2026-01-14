@@ -10,7 +10,7 @@ s.connect(("192.168.200.32", 9999))
 
 msg = {"type": "START", "job_id": job_id, "payload": payload_text, "dst": "encryptor"}
 
-s.send((json.dumps(msg) + "\n").encode())
+s.sendall((json.dumps(msg) + "\n").encode())
 s.close()
 print("Sent the job: " + job_id)
 

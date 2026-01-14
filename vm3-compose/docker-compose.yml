@@ -7,7 +7,7 @@ services:
     ports:
       - "9999:9999"
   hasher:
-    build: ./hasher_verifier/
+    build: ./hasher
     container_name: hasher
   registry:
     image: registry:2

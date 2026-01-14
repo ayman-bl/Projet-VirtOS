@@ -7,5 +7,7 @@ services:
   encryptor:
     build: ./encryptor
     container_name: encryptor
+    depends_on:
+      - keygen
     ports:
       - "7100:7100"     
